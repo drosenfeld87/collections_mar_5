@@ -104,23 +104,22 @@ isHosted: false }
 
 articles = response[:response][:results]
 
-# articles.each do |a|
-#   a[:views] = 0
-# end
+articles.each do |a|
+  a[:views] = 0
+end
 
-# def read_article(articles)
-#   count = articles.count
-#   articles[rand(0..count)][:views]+= 1
-#   return articles
-# end
-#
+def read_article(articles)
+  count = articles.count
+  articles[rand(0..count)][:views]+= 1
+  return articles
+end
+
 # puts read_article(articles)
 
-title = response[:response][:results][:webTitle]
+title = response[:response][:results]
 
 def display_views(title)
   title.each do |t,v|
-    return titles
+  puts results
 end
-puts display_views
 end
